@@ -10,7 +10,7 @@ My aim when I started was to fix PorchItem ordering bug in [MarcRobledo's BotW s
 ---
 I wrote this for Python 3.8.10 and BotW 1.6.0-switch, to use it:
 1. install [Python](https://www.python.org/downloads/#:~:text=python%203.8.10) if you havent already
-2. download [this source](https://github.com/BoredPersonWastingItsTime/SaveTools_TLoZ-BotW/archive/refs/heads/main.zip)
+2. clone or [download](https://github.com/BoredPersonWastingItsTime/SaveTools_TLoZ-BotW/archive/refs/heads/main.zip) the source
 3. extract to an empty folder
 4. place game_data.sav into the same folder
 5. double click BotW_Edit_v#.py
