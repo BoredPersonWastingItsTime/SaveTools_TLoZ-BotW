@@ -150,6 +150,7 @@ def fmenu_edit_auto_fillp(curr_fdb=False):
                 temp_PorchItem[ti]=citem_PorchItem
                 temp_PorchItem_Value1[ti]=citem_PorchItem_Value1
                 pos[index]+=1
+    print('New contents:')
     for i in range(len(temp_PorchItem)):
         print(temp_PorchItem[i].strip(b'\x00'),temp_PorchItem_Value1[i])
     for i in savedata:
@@ -168,7 +169,7 @@ def fmenu_edit_auto_fillp(curr_fdb=False):
                 print(i[1])
     else: print('Filled Porch!')
 def fmenu_edit_auto_sfood():
-    """ Using hashes:
+    """ Using hashes: (floats instead of ints?!?)
     ch[0] 05a995ff  CookEffect0     [look BotW-HashValues.ods]
     ch[1] 93999288  CookEffect1     [unknown,none?(0)]
     ch[2] cdb860da  StaminaRecover  [hearts(30hp=0x78),time(100min=0x1770)]
@@ -184,7 +185,7 @@ def fmenu_edit_auto_sfood():
     for i in range(len(ch)):
         print('Editing pos',ch[i],'with length',len(savedata[ch[i]][1]))
         savedata[ch[i]][1]=mods[i]+savedata[ch[i]][1][len(mods[i]):]
-        print('Edited  pos',ch[i],'with length',len(savedata[ch[i]][1]),'\n')
+        print('Edited pos',ch[i],'with length',len(savedata[ch[i]][1]),'\n')
     print('Done, please check lengths are the same than before edition')
 def fmenu_edit_sear():
     nav_fmenu(
@@ -543,18 +544,18 @@ def hashgen_PorchItem_Value1():
 def hashgen_CookEffect0():
     obj=[]
     elm=[
-        [b'\x02\x00\x00\x00\x78\x00\x00\x00',1],
-        [b'\x04\x00\x00\x00\x03\x00\x00\x00',1],
-        [b'\x05\x00\x00\x00\x03\x00\x00\x00',1],
-        [b'\x06\x00\x00\x00\x03\x00\x00\x00',1],
-        [b'\x0A\x00\x00\x00\x03\x00\x00\x00',1],
-        [b'\x0B\x00\x00\x00\x03\x00\x00\x00',1],
-        [b'\x0C\x00\x00\x00\x03\x00\x00\x00',1],
-        [b'\x0D\x00\x00\x00\x03\x00\x00\x00',1],
-        [b'\x0E\x00\x00\x00\xFF\x0F\x00\x00',1],
-        [b'\x0F\x00\x00\x00\x0F\x00\x00\x00',1],
-        [b'\x10\x00\x00\x00\x03\x00\x00\x00',1],
-        [b'\x00\x00\x00\x00\x03\x00\x00\x00',1]
+        [b'\x00\x00\x00\x00\x00\x00\x70\x42',1],
+        [b'\x00\x00\x00\x40\x00\x00\xf0\x42',1],
+        [b'\x00\x00\x80\x40\x00\x00\x40\x40',1],
+        [b'\x00\x00\xa0\x40\x00\x00\x40\x40',1],
+        [b'\x00\x00\xc0\x40\x00\x00\x40\x40',1],
+        [b'\x00\x00\x20\x41\x00\x00\x40\x40',1],
+        [b'\x00\x00\x30\x41\x00\x00\x40\x40',1],
+        [b'\x00\x00\x40\x41\x00\x00\x40\x40',1],
+        [b'\x00\x00\x50\x41\x00\x00\x40\x40',1],
+        [b'\x00\x00\x60\x41\x00\x40\x9c\x45',1],
+        [b'\x00\x00\x70\x41\x00\x00\x70\x41',1],
+        [b'\x00\x00\x80\x41\x00\x00\x40\x40',1]
     ]
     for i in elm:
         add=[i[0]]
@@ -585,18 +586,18 @@ def hashgen_CookEffect1():
 def hashgen_StaminaRecover():
     obj=[]
     elm=[
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1],
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1],
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1],
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1],
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1],
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1],
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1],
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1],
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1],
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1],
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1],
-        [b'\x78\x00\x00\x00\x77\x17\x00\x00',1]
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1],
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1],
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1],
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1],
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1],
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1],
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1],
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1],
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1],
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1],
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1],
+        [b'\x00\x00\xf0\x42\x00\xb8\xbb\x45',1]
     ]
     for i in elm:
         add=[i[0]]
