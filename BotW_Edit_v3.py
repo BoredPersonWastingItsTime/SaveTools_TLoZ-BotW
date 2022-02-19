@@ -84,7 +84,7 @@ def fmenu_file_save():
     global savedata
     try: sav_dump(cdir+'game_data_mod.sav',savedata)
     except: print('Error while saving.')
-    else: print('Successfully saved game_data_mod.sav file!')
+    else: print('Successfully saved game_data_mod.sav file! Please check the file size to be sure.')
 def fmenu_edit():
     nav_fmenu(
     ('auto','Quick predefined edits'),
@@ -182,9 +182,10 @@ def fmenu_edit_auto_sfood():
         hashgen_StaminaRecover()
         ]
     for i in range(len(ch)):
-        savedata[ch[i]]=mods[i]+savedata[ch[i]][1][len(mods[i]):]
-        print('Edited:',ch[i])
-    print('Done')
+        print('Editing pos',ch[i],'with length',len(savedata[ch[i]][1]))
+        savedata[ch[i]][1]=mods[i]+savedata[ch[i]][1][len(mods[i]):]
+        print('Edited  pos',ch[i],'with length',len(savedata[ch[i]][1]),'\n')
+    print('Done, please check lengths are the same than before edition')
 def fmenu_edit_sear():
     nav_fmenu(
     ('hex','Directly search for a hash'),
