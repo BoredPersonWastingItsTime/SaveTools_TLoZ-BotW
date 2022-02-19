@@ -152,6 +152,7 @@ def fmenu_edit_auto_fillp(curr_fdb=False):
                 pos[index]+=1
     for i in range(len(temp_PorchItem)):
         print(temp_PorchItem[i].strip(b'\x00'),temp_PorchItem_Value1[i])
+    input('Break')
     for i in savedata:
         if '8932285f'==hx(i[0]):
             i[1]=b''.join(temp_PorchItem)
@@ -508,7 +509,7 @@ def hashgen_PorchItem():
         [vfill(b'Item_Ore_H'),1],
         [vfill(b'Item_Ore_I'),1],
         [vfill(b'Item_Ore_J'),1],
-        [vfill(b''),10],
+        [vfill(b'Obj_FireWoodBundle'),10],
         #Food
         [vfill(b'Item_Cook_C_17'),40],
         [vfill(b'Item_Cook_C_16'),15],
