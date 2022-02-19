@@ -15,6 +15,7 @@ I wrote this for Python 3.8.10 and BotW 1.6.0-switch, to use it:
 4. place game_data.sav into the same folder
 5. double click BotW_Edit_v#.py
 6. follow instructions.
-7. tip - while in "fmenu", you can type only the first letters of the submenu instead of the whole word (like "e", "ed" or "edi" instead of "edit").
+
+Tip: while in "fmenu", you can type only the first letters of the submenu instead of the whole word (like "e", "ed" or "edi" instead of "edit").
 
 PD: If you find this useful and want to modify & share this, suggest me which license I should add (it's very confusing to me, and I'm happy with any that includes 'give credits' stuff).
